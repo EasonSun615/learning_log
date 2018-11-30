@@ -19,5 +19,6 @@ from django.urls import path,re_path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     #设置命名空间learning_logs
-    re_path(r'',include(('learning_logs.urls','learning_logs')))   
+    re_path(r'',include(('learning_logs.urls','learning_logs'))),
+    re_path(r'^users/',include(('users.urls','users'))),
 ]
